@@ -1,4 +1,4 @@
-# 📦 Amazon Supply Chain Operations & Automation Project
+# 📦 Supply Chain Operations & Automation Project
 
 ## 🚀 Overview
 
