@@ -1,47 +1,66 @@
+# 📦 Amazon Supply Chain Operations & Automation Project
 
-# Supply Chain Operations & Automation Project | Amazon Operations Case Study
+## 🚀 Overview
 
-## 📌 Overview
-This project replicates Amazon's supply chain operations using modern data tools. 
-It integrates **Supabase (Postgres DB)**, **n8n.io (workflow automation)**, **Quadratic AI (analytics)**, and **APIs** to build an automated pipeline for supply chain insights.
+This project automates and analyzes Amazon-style supply chain operations by leveraging:
 
-## ⚙️ Tools & Technologies
-- **Supabase (Postgres DB):** For structured data storage (orders, customers, products).  
-- **n8n.io:** Workflow automation for alerts, notifications, and data pipelines.  
-- **Gmail API OAuth:** Automated email notifications for supply chain exceptions.  
-- **Quadratic AI:** Business insights and KPI analysis.  
-- **Python & APIs:** Data cleaning, transformation, and exchange rate integration.  
+- **Supabase** (PostgreSQL backend)  
+- **n8n.io** (Workflow automation)  
+- **Quadratic** (Spreadsheet-like data analysis)  
+- **Gmail API**, **CSV ingestion**, and **Python preprocessing**  
 
-## 🗂️ Data Pipeline Workflow
-1. **Database Setup (Supabase):**  
-   - Created schema with tables (`fact_order_line`, `dim_products`, `dim_customers`, etc.).  
-   - Imported CSVs and updated datatypes for consistency.  
-
-2. **Automation (n8n.io):**  
-   - Integrated Gmail API with OAuth for automated email alerts.  
-   - Automated workflows for supply chain exception handling (delays, undelivered orders).  
-
-3. **Data Processing (Python + APIs):**  
-   - Cleaned and merged datasets (orders, products, customers, exchange rates).  
-   - Converted order values into INR using exchange rate API.  
-
-4. **Analytics (Quadratic AI):**  
-   - Revenue loss due to undelivered orders.  
-   - On-Time, In-Full (OTIF) discrepancies by customer.  
-   - Product categories with delivery bottlenecks.  
-   - Average delay time for late deliveries.  
-
-## 📊 Supply Chain KPIs
-- **Line Fill Rate** = Fulfilled lines / Total lines.  
-- **Volume Fill Rate** = Quantity shipped / Quantity ordered.  
-- **On-Time Delivery %** = Orders delivered on/before promised date.  
-- **In-Full Delivery %** = Orders delivered with full quantities.  
-- **OTIF %** = Orders delivered both on-time and in-full.  
-
-## 🚀 Business Impact
-- Built a **data-driven operations dashboard** highlighting supply chain reliability.  
-- Identified **top customers, order performance, and critical supply bottlenecks**.  
-- Improved decision-making by automating insights and notifications for stakeholders.  
+The pipeline helps monitor KPIs such as **OTIF %**, **Line Fill Rate**, **Volume Fill Rate**, and **Delivery Delays**, mimicking real-world warehouse and distribution metrics used at Amazon.
 
 ---
-🔗 *Project inspired by Codebasics Supply Chain Resume Challenge.*
+
+## 🧠 Key Features
+
+✅ Automated Data Ingestion from different regions (US, Ahmedabad, Vadodara) via CSV files  
+✅ AI Workflow Automation using n8n.io to parse and insert data into Supabase DB  
+✅ Data Modeling with normalized tables for orders, products, and customers  
+✅ Business Insights generation with Quadratic to uncover delivery bottlenecks and revenue loss  
+✅ Supply Chain KPI Dashboards using industry-standard metrics  
+
+---
+
+## 🛠️ Technologies Used
+
+| Tool        | Purpose                                           |
+|-------------|---------------------------------------------------|
+| **n8n.io**  | Automation of Gmail → CSV → Supabase flow         |
+| **Supabase**| PostgreSQL-based backend                          |
+| **Quadratic**| Spreadsheet + Code for insight generation        |
+| **Gmail API**| Trigger for incoming order files                 |
+| **Python**  | Data cleaning and transformation                  |
+
+---
+
+## 🖼️ Architecture Diagrams
+
+### 🔄 End-to-End Supply Chain Automation Pipeline (CSV → n8n → Supabase → Quadratic)
+
+![End-to-End Supply Chain Automation Pipeline](./assets/pipeline-overview.png)
+
+> CSV files from multiple regions (US, Ahmedabad, Vadodara) are automatically ingested, processed using `n8n`, and pushed to **Supabase**. Final analysis is done in **Quadratic**.
+
+---
+
+### 🔁 n8n Supply Chain Automation Workflow
+
+![n8n Supply Chain Automation Workflow](./assets/n8n-workflow.png)
+
+> Workflow includes Gmail Trigger → CSV Extraction → Supabase Row Insertion. Data is routed dynamically based on file content.
+
+---
+
+## 📊 KPIs Tracked
+
+- **On-Time Delivery % (OT)**  
+- **In-Full % (IF)**  
+- **OTIF %** (On-Time In-Full)  
+- **Line Fill Rate**  
+- **Volume Fill Rate**  
+- **Average Delay in Delivery**  
+- **Revenue Loss from Undelivered Orders** 
+
+---
