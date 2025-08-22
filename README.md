@@ -39,7 +39,8 @@ The pipeline helps monitor KPIs such as **OTIF %**, **Line Fill Rate**, **Volume
 
 ### 🔄 End-to-End Supply Chain Automation Pipeline (CSV → n8n → Supabase → Quadratic)
 
-![End-to-End Supply Chain Automation Pipeline](./assets/pipeline-overview.png)
+[📄 View the n8n Setup Guide (PDF)](https://github.com/Gauravsingh38/Supply-Chain-Operations-Automation-Project/blob/main/1_N8n_Setup_in_Local_Host.pdf?raw=true)
+
 
 > CSV files from multiple regions (US, Ahmedabad, Vadodara) are automatically ingested, processed using `n8n`, and pushed to **Supabase**. Final analysis is done in **Quadratic**.
 
