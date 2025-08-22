@@ -47,7 +47,8 @@ The pipeline helps monitor KPIs such as **OTIF %**, **Line Fill Rate**, **Volume
 
 ### 🔁 n8n Supply Chain Automation Workflow
 
-![n8n Supply Chain Automation Workflow](https://raw.githubusercontent.com/<YOUR-USERNAME>/<YOUR-REPO>/<BRANCH>/assets/n8n%20Supply%20Chain%20Automation%20Workflow.png)
+![n8n Workflow](https://github.com/Gauravsingh38/end-to-end-supply-chain-analytics-project/blob/main/assets/n8n%20Supply%20Chain%20Automation%20Workflow.png)
+
 
 
 > Workflow includes Gmail Trigger → CSV Extraction → Supabase Row Insertion. Data is routed dynamically based on file content.
